@@ -12,27 +12,27 @@ C# implementations of Design Patterns, mostly from [Game Programming Patterns](h
 
 ## Still to implement
 
-- Adapter
-- Façade
-- Flyweight
-- Command
-- Factory Method
 - Abstract Factory
-- Event Bus
-- Strategy
-- Component
+- Adapter
 - Bridge
-- Visitor
-- Chain of Responsibility
 - Builder
 - Bytecode
+- Chain of Responsibility
+- Command
+- Component
+- Dirty Flag
+- Double Buffer
+- Event Bus
+- Event Queue
+- Façade
+- Factory Method
+- Flyweight
+- Game Loop
+- Object Pool
+- Service Locator
+- Spatial Partition
+- Strategy
 - Subclass Sandbox
 - Type Object
-- Event Queue
-- Service Locator
-- Dirty Flag
-- Object Pool
-- Spatial Partition
-- Double Buffer
-- Game Loop
 - Update Method
+- Visitor
