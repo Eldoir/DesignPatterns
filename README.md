@@ -1,8 +1,8 @@
 # Design Patterns
 
-C# implementations of Design Patterns, mostly from [Game Programming Patterns](http://gameprogrammingpatterns.com/) book, and [Refactoring Guru](https://refactoring.guru/design-pattern) website.
+C# implementations of Design Patterns, mostly from [Game Programming Patterns](http://gameprogrammingpatterns.com/) book, and [Refactoring Guru](https://refactoring.guru/design-patterns) website.
 
-# Already Implemented
+## Already Implemented
 
 - [Decorator](DesignPatterns/DesignPatterns/Decorator.cs)
 - [Observer](DesignPatterns/DesignPatterns/Observer.cs)
@@ -10,7 +10,7 @@ C# implementations of Design Patterns, mostly from [Game Programming Patterns](h
 - [Singleton](DesignPatterns/DesignPatterns/Singleton.cs)
 - [State](DesignPatterns/DesignPatterns/State.cs)
 
-# Still to implement
+## Still to implement
 
 - Adapter
 - Façade
