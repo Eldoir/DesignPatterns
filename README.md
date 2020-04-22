@@ -8,6 +8,7 @@ C# implementations of Design Patterns, mostly from [Game Programming Patterns](h
 - [Builder](DesignPatterns/DesignPatterns/Builder.cs)
 - [Decorator](DesignPatterns/DesignPatterns/Decorator.cs)
 - [Factory Method](DesignPatterns/DesignPatterns/FactoryMethod.cs)
+- [Flyweight](DesignPatterns/DesignPatterns/Flyweight.cs)
 - [Observer](DesignPatterns/DesignPatterns/Observer.cs)
 - [Prototype](DesignPatterns/DesignPatterns/Prototype.cs)
 - [Singleton](DesignPatterns/DesignPatterns/Singleton.cs)
@@ -27,7 +28,6 @@ C# implementations of Design Patterns, mostly from [Game Programming Patterns](h
 - Event Bus
 - Event Queue
 - Façade
-- Flyweight
 - Game Loop
 - Object Pool
 - Service Locator
