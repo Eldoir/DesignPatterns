@@ -6,7 +6,7 @@ namespace DesignPatterns
     {
         static void Main(string[] args)
         {
-            IDesignPattern pattern = new Builder();
+            IDesignPattern pattern = new Flyweight();
             pattern.DisplayExample();
             Console.Read(); // Avoid quitting instantly
         }
