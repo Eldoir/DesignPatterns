@@ -6,7 +6,7 @@ namespace DesignPatterns
     {
         static void Main(string[] args)
         {
-            IDesignPattern pattern = new Strategy();
+            IDesignPattern pattern = new FactoryMethod();
             pattern.DisplayExample();
             Console.Read(); // Avoid quitting instantly
         }
