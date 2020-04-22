@@ -5,6 +5,7 @@ C# implementations of Design Patterns, mostly from [Game Programming Patterns](h
 ## Already Implemented
 
 - [Abstract Factory](DesignPatterns/DesignPatterns/AbstractFactory.cs)
+- [Builder](DesignPatterns/DesignPatterns/Builder.cs)
 - [Decorator](DesignPatterns/DesignPatterns/Decorator.cs)
 - [Factory Method](DesignPatterns/DesignPatterns/FactoryMethod.cs)
 - [Observer](DesignPatterns/DesignPatterns/Observer.cs)
@@ -17,7 +18,6 @@ C# implementations of Design Patterns, mostly from [Game Programming Patterns](h
 
 - Adapter
 - Bridge
-- Builder
 - Bytecode
 - Chain of Responsibility
 - Command
