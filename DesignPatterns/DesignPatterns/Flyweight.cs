@@ -57,9 +57,9 @@ namespace DesignPatterns
 
         class Tree
         {
-            public int x { get; }
-            public int y { get; }
-            public TreeType type { get; }
+            private int x;
+            private int y;
+            private TreeType type;
 
             public Tree(int x, int y, TreeType type)
             {
