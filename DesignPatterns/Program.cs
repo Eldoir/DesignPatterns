@@ -6,7 +6,7 @@ namespace DesignPatterns
     {
         static void Main(string[] args)
         {
-            IDesignPattern pattern = new AbstractFactory();
+            IDesignPattern pattern = new Builder();
             pattern.DisplayExample();
             Console.Read(); // Avoid quitting instantly
         }
