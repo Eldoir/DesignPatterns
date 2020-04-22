@@ -6,7 +6,7 @@ namespace DesignPatterns
     {
         static void Main(string[] args)
         {
-            IDesignPattern pattern = new State();
+            IDesignPattern pattern = new Strategy();
             pattern.DisplayExample();
             Console.Read(); // Avoid quitting instantly
         }
