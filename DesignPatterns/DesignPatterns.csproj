@@ -51,6 +51,7 @@
     <Compile Include="DesignPatterns\Singleton.cs" />
     <Compile Include="DesignPatterns\FactoryMethod.cs" />
     <Compile Include="DesignPatterns\Flyweight.cs" />
+    <Compile Include="DesignPatterns\Facade.cs" />
     <Compile Include="IDesignPattern.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
