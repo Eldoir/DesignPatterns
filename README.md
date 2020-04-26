@@ -10,6 +10,7 @@ C# implementations of Design Patterns, mostly from [Game Programming Patterns](h
 - [Chain of Responsibility](DesignPatterns/DesignPatterns/ChainOfResponsibility.cs)
 - [Command](DesignPatterns/DesignPatterns/Command.cs)
 - [Decorator](DesignPatterns/DesignPatterns/Decorator.cs)
+- [Dirty Flag](DesignPatterns/DesignPatterns/DirtyFlag.cs)
 - [Façade](DesignPatterns/DesignPatterns/Facade.cs)
 - [Factory Method](DesignPatterns/DesignPatterns/FactoryMethod.cs)
 - [Flyweight](DesignPatterns/DesignPatterns/Flyweight.cs)
@@ -26,7 +27,6 @@ C# implementations of Design Patterns, mostly from [Game Programming Patterns](h
 - Component
 - Composite
 - Data Locality
-- Dirty Flag
 - Double Buffer
 - Event Bus
 - Event Queue
