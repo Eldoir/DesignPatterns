@@ -6,7 +6,7 @@ namespace DesignPatterns
     {
         static void Main(string[] args)
         {
-            IDesignPattern pattern = new Adapter();
+            IDesignPattern pattern = new DirtyFlag();
             pattern.DisplayExample();
             Console.Read(); // Avoid quitting instantly
         }
