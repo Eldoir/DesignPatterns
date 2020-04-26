@@ -6,7 +6,7 @@ namespace DesignPatterns
     {
         static void Main(string[] args)
         {
-            IDesignPattern pattern = new ChainOfResponsibility();
+            IDesignPattern pattern = new Adapter();
             pattern.DisplayExample();
             Console.Read(); // Avoid quitting instantly
         }
