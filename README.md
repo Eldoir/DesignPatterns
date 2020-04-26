@@ -24,16 +24,22 @@ C# implementations of Design Patterns, mostly from [Game Programming Patterns](h
 - Bridge
 - Bytecode
 - Component
+- Composite
 - Data Locality
 - Dirty Flag
 - Double Buffer
 - Event Bus
 - Event Queue
 - Game Loop
+- Iterator
+- Mediator
+- Memento
 - Object Pool
+- Proxy
 - Service Locator
 - Spatial Partition
 - Subclass Sandbox
+- Template Method
 - Type Object
 - Update Method
 - Visitor
