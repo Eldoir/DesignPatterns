@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DesignPatterns\ChainOfResponsibility.cs" />
     <Compile Include="DesignPatterns\Command.cs" />
     <Compile Include="DesignPatterns\Builder.cs" />
     <Compile Include="DesignPatterns\AbstractFactory.cs" />
