@@ -24,6 +24,7 @@ C# implementations of Design Patterns, mostly from [Game Programming Patterns](h
 - Bridge
 - Bytecode
 - Component
+- Data Locality
 - Dirty Flag
 - Double Buffer
 - Event Bus
