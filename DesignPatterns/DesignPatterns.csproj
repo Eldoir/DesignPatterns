@@ -61,6 +61,7 @@
     <Compile Include="DesignPatterns\Prototype.cs" />
     <Compile Include="DesignPatterns\State.cs" />
     <Compile Include="DesignPatterns\Strategy.cs" />
+    <Compile Include="DesignPatterns\ServiceLocator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
