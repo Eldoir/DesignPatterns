@@ -6,7 +6,7 @@ namespace DesignPatterns
     {
         static void Main(string[] args)
         {
-            IDesignPattern pattern = new ServiceLocator();
+            IDesignPattern pattern = new ObjectPool();
             pattern.DisplayExample();
             Console.Read(); // Avoid quitting instantly
         }
