@@ -6,7 +6,7 @@ namespace DesignPatterns
     {
         static void Main(string[] args)
         {
-            IDesignPattern pattern = new ObjectPool();
+            IDesignPattern pattern = new SubclassSandbox();
             pattern.DisplayExample();
             Console.Read(); // Avoid quitting instantly
         }

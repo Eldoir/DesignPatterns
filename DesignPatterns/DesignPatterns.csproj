@@ -63,6 +63,7 @@
     <Compile Include="DesignPatterns\State.cs" />
     <Compile Include="DesignPatterns\Strategy.cs" />
     <Compile Include="DesignPatterns\ServiceLocator.cs" />
+    <Compile Include="SubclassSandbox.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
