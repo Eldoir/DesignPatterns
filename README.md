@@ -21,6 +21,7 @@ C# implementations of Design Patterns, mostly from [Game Programming Patterns](h
 - [Singleton](DesignPatterns/DesignPatterns/Singleton.cs)
 - [State](DesignPatterns/DesignPatterns/State.cs)
 - [Strategy](DesignPatterns/DesignPatterns/Strategy.cs)
+- [Subclass Sandbox](DesignPatterns/DesignPatterns/SubclassSandbox.cs)
 
 ## Still to implement
 
@@ -38,7 +39,6 @@ C# implementations of Design Patterns, mostly from [Game Programming Patterns](h
 - Memento
 - Proxy
 - Spatial Partition
-- Subclass Sandbox
 - Template Method
 - Type Object
 - Update Method
