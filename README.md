@@ -14,6 +14,7 @@ C# implementations of Design Patterns, mostly from [Game Programming Patterns](h
 - [Façade](DesignPatterns/DesignPatterns/Facade.cs)
 - [Factory Method](DesignPatterns/DesignPatterns/FactoryMethod.cs)
 - [Flyweight](DesignPatterns/DesignPatterns/Flyweight.cs)
+- [Object Pool](DesignPatterns/DesignPatterns/ObjectPool.cs)
 - [Observer](DesignPatterns/DesignPatterns/Observer.cs)
 - [Prototype](DesignPatterns/DesignPatterns/Prototype.cs)
 - [Service Locator](DesignPatterns/DesignPatterns/ServiceLocator.cs)
@@ -35,7 +36,6 @@ C# implementations of Design Patterns, mostly from [Game Programming Patterns](h
 - Iterator
 - Mediator
 - Memento
-- Object Pool
 - Proxy
 - Spatial Partition
 - Subclass Sandbox
