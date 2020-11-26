@@ -52,7 +52,7 @@ namespace DesignPatterns
 
             public void ChangeState(HeroState state)
             {
-                if (this. state != null)
+                if (this.state != null)
                     this.state.Exit();
 
                 this.state = state;
