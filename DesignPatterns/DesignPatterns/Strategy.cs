@@ -10,9 +10,9 @@ namespace DesignPatterns
     {
         public void DisplayExample()
         {
-            Context context = new Context(new OrderAscendingStrategy());
+            var context = new Context(new OrderAscendingStrategy());
 
-            int[] nbs = new int[] { 2, 6, 4, 7, 1, 9 };
+            var nbs = new [] { 2, 6, 4, 7, 1, 9 };
 
             context.DisplaySorted(nbs);
 
@@ -24,7 +24,7 @@ namespace DesignPatterns
         #region Implementation
         class Context
         {
-            ISortingStrategy strategy;
+            private ISortingStrategy strategy;
 
             public Context(ISortingStrategy strategy)
             {
@@ -40,8 +40,8 @@ namespace DesignPatterns
             {
                 int[] sortedNbs = strategy.Sort(nbs);
 
-                string result = string.Empty;
-                foreach (var nb in sortedNbs)
+                var result = string.Empty;
+                foreach (int nb in sortedNbs)
                 {
                     result += nb + " ";
                 }

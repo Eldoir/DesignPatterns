@@ -9,7 +9,7 @@ namespace DesignPatterns
     {
         public void DisplayExample()
         {
-            ParticleSystem particleSystem = new ParticleSystem();
+            var particleSystem = new ParticleSystem();
 
             Superpower skyLaunch = CreateSkyLaunch(particleSystem);
 
@@ -22,14 +22,14 @@ namespace DesignPatterns
             iceWall.Activate();
         }
 
-        Superpower CreateSkyLaunch(ParticleSystem ps)
+        Superpower CreateSkyLaunch(ParticleSystem particleSystem)
         {
-            return new SkyLaunch().Init(new ParticleSystem());
+            return new SkyLaunch().Init(particleSystem);
         }
 
-        Superpower CreateIceWall(ParticleSystem ps)
+        Superpower CreateIceWall(ParticleSystem particleSystem)
         {
-            return new IceWall().Init(new ParticleSystem());
+            return new IceWall().Init(particleSystem);
         }
 
         #region Implementation
@@ -42,6 +42,8 @@ namespace DesignPatterns
                 this.particleSystem = particleSystem;
                 return this; // Allow chaining
             }
+
+            public abstract void Activate();
 
             protected void Move(float x, float y, float z)
             {
@@ -57,8 +59,6 @@ namespace DesignPatterns
             {
                 particleSystem.SpawnParticles(particleType, count);
             }
-
-            public abstract void Activate();
         }
 
         class SkyLaunch : Superpower

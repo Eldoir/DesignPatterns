@@ -9,7 +9,7 @@ namespace DesignPatterns
     {
         public void DisplayExample()
         {
-            Some3rdPartyFramework framework = new Some3rdPartyFramework();
+            var framework = new Some3rdPartyFramework();
 
             ITarget target = new MyAdapter(framework);
 
@@ -20,14 +20,6 @@ namespace DesignPatterns
         interface ITarget
         {
             string ReturnDataAsXML();
-        }
-
-        class Some3rdPartyFramework
-        {
-            public string ReturnDataAsJSON()
-            {
-                return "Return data as JSON";
-            }
         }
 
         class MyAdapter : ITarget
@@ -51,5 +43,13 @@ namespace DesignPatterns
             }
         }
         #endregion
+
+        class Some3rdPartyFramework
+        {
+            public string ReturnDataAsJSON()
+            {
+                return "Return data as JSON";
+            }
+        }
     }
 }

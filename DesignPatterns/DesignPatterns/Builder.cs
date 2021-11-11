@@ -10,9 +10,9 @@ namespace DesignPatterns
     {
         public void DisplayExample()
         {
-            CarBuilder builder = new CarBuilder();
+            var builder = new CarBuilder();
 
-            CarDirector director = new CarDirector(builder);
+            var director = new CarDirector(builder);
 
             director.BuildCheapCar();
             builder.GetResult().DisplayOptions();
@@ -26,7 +26,7 @@ namespace DesignPatterns
         #region Implementation
         class CarDirector
         {
-            IVehicleBuilder builder;
+            private IVehicleBuilder builder;
 
             public CarDirector(IVehicleBuilder builder)
             {

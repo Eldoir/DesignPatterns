@@ -10,12 +10,12 @@ namespace DesignPatterns
     {
         public void DisplayExample()
         {
-            GraphNode graph = new GraphNode(null);
+            var graph = new GraphNode(null);
 
-            GraphNode boatObj = new GraphNode(new Mesh("Boat"));
-            GraphNode crowNestObj = new GraphNode(new Mesh("CrowNest"));
-            GraphNode pirateObj = new GraphNode(new Mesh("Pirate"));
-            GraphNode parrotObj = new GraphNode(new Mesh("Parrot"));
+            var boatObj = new GraphNode(new Mesh("Boat"));
+            var crowNestObj = new GraphNode(new Mesh("CrowNest"));
+            var pirateObj = new GraphNode(new Mesh("Pirate"));
+            var parrotObj = new GraphNode(new Mesh("Parrot"));
 
             graph.AddChild(boatObj);
             boatObj.AddChild(crowNestObj);
@@ -43,18 +43,18 @@ namespace DesignPatterns
         #region Implementation
         class Transform
         {
-            public Vector3 pos { get; }
+            public Vector3 Pos { get; }
 
-            public static Transform Origin => new Transform(Vector3.zero);
+            public static readonly Transform Origin = new Transform(Vector3.Zero);
 
             public Transform(Vector3 pos)
             {
-                this.pos = pos;
+                Pos = pos;
             }
 
             public Transform Combine(Transform other)
             {
-                return new Transform(new Vector3(pos.x + other.pos.x, pos.y + other.pos.y, pos.z + other.pos.z));
+                return new Transform(new Vector3(Pos.X + other.Pos.X, Pos.Y + other.Pos.Y, Pos.Z + other.Pos.Z));
             }
         }
 
@@ -66,7 +66,7 @@ namespace DesignPatterns
             private Transform world;
             private bool dirty;
 
-            private List<GraphNode> children;
+            private readonly List<GraphNode> children;
 
             public GraphNode(Mesh mesh)
             {
@@ -82,7 +82,7 @@ namespace DesignPatterns
 
             public void Translate(Vector3 delta)
             {
-                Transform newPos = new Transform(local.pos + delta);
+                var newPos = new Transform(local.Pos + delta);
                 SetTransform(newPos);
             }
 
@@ -116,41 +116,43 @@ namespace DesignPatterns
 
             public void RenderMesh(Mesh mesh, Transform transform)
             {
-                Console.WriteLine($"Rendering mesh {mesh.name} at position {transform.pos}");
+                Console.WriteLine($"Rendering mesh {mesh.Name} at position {transform.Pos}");
             }
         }
 
         class Mesh
         {
-            public string name { get; }
+            public string Name { get; }
 
             public Mesh(string name)
             {
-                this.name = name;
+                Name = name;
             }
         }
 
         class Vector3
         {
-            public float x, y, z;
+            public float X { get; }
+            public float Y { get; }
+            public float Z { get; }
 
-            public static Vector3 zero => new Vector3(0, 0, 0);
+            public static readonly Vector3 Zero = new Vector3(0, 0, 0);
 
             public Vector3(float x, float y, float z)
             {
-                this.x = x;
-                this.y = y;
-                this.z = z;
+                X = x;
+                Y = y;
+                Z = z;
             }
 
             public override string ToString()
             {
-                return $"({x}, {y}, {z})";
+                return $"({X}, {Y}, {Z})";
             }
 
             public static Vector3 operator+(Vector3 v1, Vector3 v2)
             {
-                return new Vector3(v1.x + v2.x, v1.y + v2.y, v1.z + v2.z);
+                return new Vector3(v1.X + v2.X, v1.Y + v2.Y, v1.Z + v2.Z);
             }
         }
         #endregion

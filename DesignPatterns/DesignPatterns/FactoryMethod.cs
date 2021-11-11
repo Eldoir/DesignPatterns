@@ -9,7 +9,7 @@ namespace DesignPatterns
     {
         public void DisplayExample()
         {
-            Context context = new Context(new CarFactory());
+            var context = new Context(new CarFactory());
 
             context.DisplayTravellingCost(10);
 
@@ -44,7 +44,6 @@ namespace DesignPatterns
             private ITraveler traveler;
 
             protected abstract ITraveler CreateTraveler();
-            
 
             public void DisplayTravellingCost(int km)
             {
@@ -60,7 +59,7 @@ namespace DesignPatterns
             /// </summary>
             private ITraveler GetTraveler()
             {
-                if (traveler == null)
+                if (traveler is null)
                 {
                     traveler = CreateTraveler();
                 }

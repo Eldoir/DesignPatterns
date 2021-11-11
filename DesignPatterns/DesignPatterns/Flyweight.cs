@@ -11,27 +11,28 @@ namespace DesignPatterns
     {
         public void DisplayExample()
         {
-            Forest forest = new Forest(1000000);
+            var forest = new Forest(1000000);
             forest.Draw();
         }
 
         #region Implementation
         class TreeType
         {
-            public string name { get; }
-            public string color { get; }
-            public object texture { get; }
+            public string Name { get; }
+            public string Color { get; }
+            public object Texture { get; }
 
             public TreeType(string name, string color, object texture)
             {
-                this.name = name;
-                this.color = color;
-                this.texture = texture;
+                Name = name;
+                Color = color;
+                Texture = texture;
             }
 
             public void DrawAt(int x, int y)
             {
-                //Console.WriteLine($"Drawing tree at ({x},{y})"); // Disable if many many trees
+                // Disable if many many trees
+                //Console.WriteLine($"Drawing tree at ({x},{y})");
             }
         }
 
@@ -42,12 +43,12 @@ namespace DesignPatterns
             // Re-use an existing flyweight or create a new object.
             public static TreeType GetTreeType(string name, string color, object texture)
             {
-                TreeType type = treeTypes.FirstOrDefault(t => t.name == name && t.color == color && t.texture == texture);
+                TreeType type = treeTypes.FirstOrDefault(t => t.Name == name && t.Color == color && t.Texture == texture);
 
-                if (type == null)
+                if (type is null)
                 {
                     type = new TreeType(name, color, texture);
-                    Console.WriteLine($"New TreeType: {type.name}");
+                    Console.WriteLine($"New TreeType: {type.Name}");
                     treeTypes.Add(type);
                 }
 
@@ -76,7 +77,7 @@ namespace DesignPatterns
 
         class Forest
         {
-            private Tree[] trees;
+            private readonly Tree[] trees;
             private int nbTrees;
 
             public Forest(int nbTrees)
@@ -89,7 +90,7 @@ namespace DesignPatterns
 
             private void GenerateTrees()
             {
-                int sqrt = (int)Math.Sqrt(nbTrees);
+                var sqrt = (int)Math.Sqrt(nbTrees);
 
                 for (int i = 0; i < sqrt; i++)
                 {

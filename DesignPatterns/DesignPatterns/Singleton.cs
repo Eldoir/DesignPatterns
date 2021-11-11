@@ -21,10 +21,8 @@ namespace DesignPatterns
             {
                 get
                 {
-                    if (_instance == null)
-                    {
+                    if (_instance is null)
                         _instance = new SingletonImpl();
-                    }
 
                     return _instance;
                 }

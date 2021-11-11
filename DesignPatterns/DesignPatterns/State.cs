@@ -9,7 +9,7 @@ namespace DesignPatterns
     {
         public void DisplayExample()
         {
-            Hero hero = new Hero();
+            var hero = new Hero();
 
             hero.SimulatePressJumpButton();
             hero.SimulatePressDuckButton();
@@ -23,7 +23,7 @@ namespace DesignPatterns
         #region Implementation
         class Hero
         {
-            HeroState state;
+            private HeroState state;
 
             public Hero()
             {
@@ -96,11 +96,11 @@ namespace DesignPatterns
         class DuckingState : HeroState
         {
             private int chargeTime = 0;
-            private const int MaxChargeTime = 200000000;
+            private const int MaxChargeTime = 100000000;
 
             public override void Enter()
             {
-                Console.WriteLine("Entering Ducking");
+                Console.WriteLine("Entering Ducking, charging super bomb...");
             }
 
             public override void Update()

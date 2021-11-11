@@ -9,7 +9,7 @@ namespace DesignPatterns
     {
         public void DisplayExample()
         {
-            ParticlePool pool = new ParticlePool();
+            var pool = new ParticlePool();
 
             int maxLifetime = 10;
 
@@ -63,7 +63,7 @@ namespace DesignPatterns
                     Console.WriteLine($"Creating particle at pos ({x}, {y}) with lifetime {lifetime}");
 
                     Particle newParticle = firstAvailable;
-                    firstAvailable = newParticle.next;
+                    firstAvailable = newParticle.Next;
 
                     newParticle.Init(x, y, xVel, yVel, lifetime);
                 }
@@ -88,13 +88,13 @@ namespace DesignPatterns
 
         class Particle
         {
-            private int framesLeft;
             private float x, y;
             private float xVel, yVel;
+            private int framesLeft;
 
             public bool InUse => framesLeft > 0;
 
-            public Particle next { get; private set; }
+            public Particle Next { get; private set; }
 
             public void Init(float x, float y, float xVel, float yVel, int lifetime)
             {
@@ -107,12 +107,13 @@ namespace DesignPatterns
 
             public void SetNext(Particle next)
             {
-                this.next = next;
+                Next = next;
             }
 
             public bool Animate()
             {
-                if (!InUse) return false;
+                if (!InUse)
+                    return false;
 
                 Console.WriteLine($"Particle animating, frames left: {framesLeft}");
 

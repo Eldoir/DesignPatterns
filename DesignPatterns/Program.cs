@@ -4,9 +4,9 @@ namespace DesignPatterns
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            IDesignPattern pattern = new SubclassSandbox();
+            IDesignPattern pattern = new AbstractFactory();
             pattern.DisplayExample();
             Console.Read(); // Avoid quitting instantly
         }

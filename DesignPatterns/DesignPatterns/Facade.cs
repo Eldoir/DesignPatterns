@@ -9,7 +9,7 @@ namespace DesignPatterns
     {
         public void DisplayExample()
         {
-            VideoConverter converter = new VideoConverter();
+            var converter = new VideoConverter();
             VideoFile file = converter.Convert("funny-cats-video.ogg", "mp4");
             file.Save();
         }
@@ -19,10 +19,10 @@ namespace DesignPatterns
         {
             public VideoFile Convert(string filename, string format)
             {
-                VideoFile file = new VideoFile(filename);
+                var file = new VideoFile(filename);
 
                 Codec sourceCodec = new CodecFactory().Extract(file);
-                Codec destinationCodec = new Codec();
+                Codec destinationCodec;
 
                 if (format == "mp4")
                     destinationCodec = new MPEG4CompressionCodec();
@@ -35,6 +35,7 @@ namespace DesignPatterns
                 return new VideoFile(result);
             }
         }
+        #endregion
 
         // Below, some classes that could come from a video framework
 
@@ -53,7 +54,10 @@ namespace DesignPatterns
         class OggCompressionCodec : Codec { }
         class MPEG4CompressionCodec : Codec { }
 
-        class CodecFactory { public Codec Extract(VideoFile file) => new Codec(); }
+        class CodecFactory
+        {
+            public Codec Extract(VideoFile file) => new Codec();
+        }
 
         static class BitrateReader
         {
@@ -61,7 +65,9 @@ namespace DesignPatterns
             public static byte[] Convert(string buffer, Codec codec) => null;
         }
 
-        class AudioMixer { public byte[] Fix(byte[] bytes) => null; }
-        #endregion
+        class AudioMixer
+        {
+            public byte[] Fix(byte[] bytes) => null;
+        }
     }
 }

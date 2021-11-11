@@ -11,10 +11,10 @@ namespace DesignPatterns
     {
         public void DisplayExample()
         {
-            Subject subject = new Subject();
+            var subject = new Subject();
 
-            ObserverA observerA = new ObserverA();
-            ObserverB observerB = new ObserverB();
+            var observerA = new ObserverA();
+            var observerB = new ObserverB();
 
             subject.Attach(observerA);
             subject.Attach(observerB);
@@ -43,9 +43,9 @@ namespace DesignPatterns
 
         class Subject : ISubject
         {
-            public int State { get; set; }
+            public int State { get; private set; }
 
-            private List<IObserver> observers = new List<IObserver>();
+            private readonly List<IObserver> observers = new List<IObserver>();
 
             public void Attach(IObserver observer)
             {
@@ -59,7 +59,7 @@ namespace DesignPatterns
 
             public void Notify()
             {
-                foreach (var observer in observers)
+                foreach (IObserver observer in observers)
                 {
                     observer.OnNotify(this);
                 }

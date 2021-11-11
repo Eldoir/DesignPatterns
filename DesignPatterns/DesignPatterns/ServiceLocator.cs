@@ -11,11 +11,11 @@ namespace DesignPatterns
         {
             Locator.Initialize();
 
-            Locator.audioService.PlaySound(0);
+            Locator.AudioService.PlaySound(0);
 
             Locator.Provide(new ConsoleAudio());
 
-            Locator.audioService.PlaySound(0);
+            Locator.AudioService.PlaySound(0);
         }
 
         #region Implementation
@@ -60,25 +60,18 @@ namespace DesignPatterns
 
         class Locator
         {
-            public static IAudio audioService { get; private set; }
+            public static IAudio AudioService { get; private set; }
             private static IAudio nullAudioService;
 
             public static void Initialize()
             {
                 nullAudioService = new NullAudio();
-                audioService = nullAudioService;
+                AudioService = nullAudioService;
             }
 
             public static void Provide(IAudio audio)
             {
-                if (audio == null)
-                {
-                    audioService = nullAudioService;
-                }
-                else
-                {
-                    audioService = audio;
-                }
+                AudioService = audio ?? nullAudioService;
             }
         }
         #endregion

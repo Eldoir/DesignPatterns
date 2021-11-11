@@ -9,7 +9,7 @@ namespace DesignPatterns
     {
         public void DisplayExample()
         {
-            SandwichComponent sandwich = new Sandwich();
+            ISandwichComponent sandwich = new Sandwich();
             sandwich = new SandwichWithSalade(sandwich);
             sandwich = new SandwichWithTomate(sandwich);
 
@@ -17,12 +17,12 @@ namespace DesignPatterns
         }
 
         #region Implementation
-        interface SandwichComponent
+        interface ISandwichComponent
         {
             string Make();
         }
 
-        class Sandwich : SandwichComponent
+        class Sandwich : ISandwichComponent
         {
             public string Make()
             {
@@ -30,11 +30,11 @@ namespace DesignPatterns
             }
         }
 
-        abstract class SandwichDecorator : SandwichComponent
+        abstract class SandwichDecorator : ISandwichComponent
         {
-            protected SandwichComponent sandwich;
+            protected ISandwichComponent sandwich;
 
-            public SandwichDecorator(SandwichComponent sandwich)
+            public SandwichDecorator(ISandwichComponent sandwich)
             {
                 this.sandwich = sandwich;
             }
@@ -47,7 +47,10 @@ namespace DesignPatterns
 
         class SandwichWithSalade : SandwichDecorator
         {
-            public SandwichWithSalade(SandwichComponent sandwich) : base(sandwich) { }
+            public SandwichWithSalade(ISandwichComponent sandwich)
+                : base(sandwich)
+            {
+            }
 
             public override string Make()
             {
@@ -57,7 +60,10 @@ namespace DesignPatterns
 
         class SandwichWithTomate : SandwichDecorator
         {
-            public SandwichWithTomate(SandwichComponent sandwich) : base(sandwich) { }
+            public SandwichWithTomate(ISandwichComponent sandwich)
+                : base(sandwich)
+            {
+            }
 
             public override string Make()
             {

@@ -10,7 +10,7 @@ namespace DesignPatterns
     {
         public void DisplayExample()
         {
-            Unit knight = new Unit();
+            var knight = new Unit();
 
             MoveUp(knight);
             MoveUp(knight);
@@ -23,12 +23,14 @@ namespace DesignPatterns
 
         void MoveUp(Unit unit)
         {
-            new MoveUnitCommand(unit, unit.x, unit.y + 1).Execute();
+            Console.Write("Moving Up: ");
+            new MoveUnitCommand(unit, unit.X, unit.Y + 1).Execute();
         }
 
         void MoveDown(Unit unit)
         {
-            new MoveUnitCommand(unit, unit.x, unit.y - 1).Execute();
+            Console.Write("Moving Down: ");
+            new MoveUnitCommand(unit, unit.X, unit.Y - 1).Execute();
         }
 
         void Undo()
@@ -70,8 +72,8 @@ namespace DesignPatterns
             {
                 base.Execute();
 
-                beforeX = unit.x;
-                beforeY = unit.y;
+                beforeX = unit.X;
+                beforeY = unit.Y;
                 unit.MoveTo(x, y);
             }
 
@@ -102,25 +104,25 @@ namespace DesignPatterns
 
         class Unit
         {
-            public int x { get; private set; }
-            public int y { get; private set; }
+            public int X { get; private set; }
+            public int Y { get; private set; }
 
             public Unit()
             {
-                Console.WriteLine($"Starting at ({x}, {y})");
+                Console.WriteLine($"Starting at ({X}, {Y})");
             }
 
             public void MoveTo(int x, int y)
             {
-                this.x = x;
-                this.y = y;
-                Console.WriteLine($"Moving to ({x}, {y})");
+                X = x;
+                Y = y;
+                Console.WriteLine($"Moving to ({X}, {Y})");
             }
         }
 
         static class CommandHistory
         {
-            private static Stack<ICommand> commands = new Stack<ICommand>();
+            private static readonly Stack<ICommand> commands = new Stack<ICommand>();
 
             public static void AddCommand(ICommand command)
             {

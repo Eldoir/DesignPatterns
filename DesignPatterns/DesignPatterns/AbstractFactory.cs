@@ -9,7 +9,7 @@ namespace DesignPatterns
     {
         public void DisplayExample()
         {
-            Context context = new Context(new ModernFactory());
+            var context = new Context(new ModernFactory());
 
             context.DisplayProducts();
 
@@ -40,6 +40,38 @@ namespace DesignPatterns
 
                 ISofa sofa = factory.CreateSofa();
                 Console.WriteLine($"{sofa.Name}, can sit on: {sofa.CanSitOn}");
+            }
+        }
+
+        interface IFactory
+        {
+            IChair CreateChair();
+            ISofa CreateSofa();
+        }
+
+        class ModernFactory : IFactory
+        {
+            public IChair CreateChair()
+            {
+                return new ModernChair();
+            }
+
+            public ISofa CreateSofa()
+            {
+                return new ModernSofa();
+            }
+        }
+
+        class VictorianFactory : IFactory
+        {
+            public IChair CreateChair()
+            {
+                return new VictorianChair();
+            }
+
+            public ISofa CreateSofa()
+            {
+                return new VictorianSofa();
             }
         }
 
@@ -77,38 +109,6 @@ namespace DesignPatterns
         {
             public string Name => "Victorian Sofa";
             public bool CanSitOn => false;
-        }
-
-        interface IFactory
-        {
-            IChair CreateChair();
-            ISofa CreateSofa();
-        }
-
-        class ModernFactory : IFactory
-        {
-            public IChair CreateChair()
-            {
-                return new ModernChair();
-            }
-
-            public ISofa CreateSofa()
-            {
-                return new ModernSofa();
-            }
-        }
-
-        class VictorianFactory : IFactory
-        {
-            public IChair CreateChair()
-            {
-                return new VictorianChair();
-            }
-
-            public ISofa CreateSofa()
-            {
-                return new VictorianSofa();
-            }
         }
         #endregion
     }

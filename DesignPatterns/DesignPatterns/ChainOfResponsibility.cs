@@ -17,10 +17,10 @@ namespace DesignPatterns
             squirrel.SetNext(dog);
 
             Console.WriteLine("Chain: Monkey > Squirrel > Dog");
-            OfferFood("Banana", monkey);
-            OfferFood("Nut", monkey);
-            OfferFood("MeatBall", monkey);
-            OfferFood("Cup of coffee", monkey);
+            OfferFood(FoodType.Banana, monkey);
+            OfferFood(FoodType.Nut, monkey);
+            OfferFood(FoodType.Meatball, monkey);
+            OfferFood(FoodType.Coffee, monkey);
 
             Console.WriteLine("\nChain: Squirrel > Dog");
             OfferFood("Banana", squirrel);
@@ -74,14 +74,14 @@ namespace DesignPatterns
 
         abstract class AnimalHandler : AbstractHandler<string>
         {
-            public abstract string name { get; }
-            public abstract string foodName { get; }
+            public abstract string Name { get; }
+            public abstract string FoodName { get; }
 
             public override string Handle(string request)
             {
-                if (request.Equals(foodName))
+                if (request.Equals(FoodName))
                 {
-                    return $"{name}: I'll eat the {foodName}.";
+                    return $"{Name}: I'll eat the {FoodName}.";
                 }
                 else
                 {
@@ -92,20 +92,28 @@ namespace DesignPatterns
         
         class MonkeyHandler : AnimalHandler
         {
-            public override string name => "Monkey";
-            public override string foodName => "Banana";
+            public override string Name => "Monkey";
+            public override string FoodName => FoodType.Banana;
         }
 
         class SquirrelHandler : AnimalHandler
         {
-            public override string name => "Squirrel";
-            public override string foodName => "Nut";
+            public override string Name => "Squirrel";
+            public override string FoodName => FoodType.Nut;
         }
 
         class DogHandler : AnimalHandler
         {
-            public override string name => "Dog";
-            public override string foodName => "MeatBall";
+            public override string Name => "Dog";
+            public override string FoodName => FoodType.Meatball;
+        }
+
+        static class FoodType
+        {
+            public const string Banana = "Banana";
+            public const string Nut = "Nut";
+            public const string Meatball = "Meatball";
+            public const string Coffee = "Cup of coffee";
         }
         #endregion
     }

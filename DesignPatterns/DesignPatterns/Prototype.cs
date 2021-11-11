@@ -12,20 +12,20 @@ namespace DesignPatterns
         {
             Monster ghost = new Ghost(5, 2);
 
-            MonsterSpawner ghostSpawner = new MonsterSpawner(ghost);
+            var ghostSpawner = new MonsterSpawner(ghost);
 
             ghostSpawner.Clone();
             ghostSpawner.Clone();
 
             // You can make use of a registry to add and get ready-to-use prototypes.
-            MonsterRegistry monsterRegistry = new MonsterRegistry();
+            var monsterRegistry = new MonsterRegistry();
 
             monsterRegistry["BabySkeleton"] = new Skeleton(2, 3);
             monsterRegistry["AdultSkeleton"] = new Skeleton(6, 4);
 
-            Skeleton adultSkeleton = (Skeleton)monsterRegistry["AdultSkeleton"].Clone();
+            var adultSkeleton = (Monster)monsterRegistry["AdultSkeleton"].Clone();
 
-            MonsterSpawner skeletonSpawner = new MonsterSpawner(adultSkeleton);
+            var skeletonSpawner = new MonsterSpawner(adultSkeleton);
 
             skeletonSpawner.Clone();
             skeletonSpawner.Clone();
@@ -77,7 +77,9 @@ namespace DesignPatterns
         class Ghost : Monster
         {
             public Ghost(int health, int speed)
-                : base(health, speed) { }
+                : base(health, speed)
+            {
+            }
 
             public override string Name => "Ghost";
 
@@ -90,7 +92,9 @@ namespace DesignPatterns
         class Skeleton : Monster
         {
             public Skeleton(int health, int speed)
-                : base(health, speed) { }
+                : base(health, speed)
+            {
+            }
 
             public override string Name => "Skeleton";
 
@@ -105,12 +109,12 @@ namespace DesignPatterns
         /// </summary>
         class MonsterRegistry
         {
-            private Dictionary<string, IPrototype> monsters = new Dictionary<string, IPrototype>();
-
+            private readonly Dictionary<string, IPrototype> monsters = new Dictionary<string, IPrototype>();
+            
             public IPrototype this[string key]
             {
-                get { return monsters[key]; }
-                set { monsters.Add(key, value); }
+                get => monsters[key];
+                set => monsters.Add(key, value);
             }
         }
         #endregion
