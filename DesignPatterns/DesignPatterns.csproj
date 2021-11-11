@@ -55,6 +55,7 @@
     <Compile Include="DesignPatterns\Flyweight.cs" />
     <Compile Include="DesignPatterns\Facade.cs" />
     <Compile Include="DesignPatterns\DirtyFlag.cs" />
+    <Compile Include="DesignPatterns\SubclassSandbox.cs" />
     <Compile Include="IDesignPattern.cs" />
     <Compile Include="DesignPatterns\ObjectPool.cs" />
     <Compile Include="Program.cs" />
@@ -63,7 +64,6 @@
     <Compile Include="DesignPatterns\State.cs" />
     <Compile Include="DesignPatterns\Strategy.cs" />
     <Compile Include="DesignPatterns\ServiceLocator.cs" />
-    <Compile Include="SubclassSandbox.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
