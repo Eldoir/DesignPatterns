@@ -16,7 +16,7 @@ C# implementations of Design Patterns, mostly from [Game Programming Patterns](h
 - [Subclass Sandbox](DesignPatterns/DesignPatterns/Behavioral/SubclassSandbox.cs)
 - Template Method
 - Type Object
-- Visitor
+- [Visitor](DesignPatterns/DesignPatterns/Behavioral/Visitor.cs)
 
 ## Creational
 
