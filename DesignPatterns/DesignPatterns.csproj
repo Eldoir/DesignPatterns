@@ -43,27 +43,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DesignPatterns\Adapter.cs" />
-    <Compile Include="DesignPatterns\ChainOfResponsibility.cs" />
-    <Compile Include="DesignPatterns\Command.cs" />
-    <Compile Include="DesignPatterns\Builder.cs" />
-    <Compile Include="DesignPatterns\AbstractFactory.cs" />
-    <Compile Include="DesignPatterns\Decorator.cs" />
-    <Compile Include="DesignPatterns\Observer.cs" />
-    <Compile Include="DesignPatterns\Singleton.cs" />
-    <Compile Include="DesignPatterns\FactoryMethod.cs" />
-    <Compile Include="DesignPatterns\Flyweight.cs" />
-    <Compile Include="DesignPatterns\Facade.cs" />
-    <Compile Include="DesignPatterns\DirtyFlag.cs" />
-    <Compile Include="DesignPatterns\SubclassSandbox.cs" />
+    <Compile Include="DesignPatterns\Structural\Adapter.cs" />
+    <Compile Include="DesignPatterns\Behavioral\ChainOfResponsibility.cs" />
+    <Compile Include="DesignPatterns\Behavioral\Command.cs" />
+    <Compile Include="DesignPatterns\Creational\Builder.cs" />
+    <Compile Include="DesignPatterns\Creational\AbstractFactory.cs" />
+    <Compile Include="DesignPatterns\Structural\Decorator.cs" />
+    <Compile Include="DesignPatterns\Behavioral\Observer.cs" />
+    <Compile Include="DesignPatterns\Creational\Singleton.cs" />
+    <Compile Include="DesignPatterns\Creational\FactoryMethod.cs" />
+    <Compile Include="DesignPatterns\Structural\Flyweight.cs" />
+    <Compile Include="DesignPatterns\Structural\Facade.cs" />
+    <Compile Include="DesignPatterns\Optimization\DirtyFlag.cs" />
+    <Compile Include="DesignPatterns\Behavioral\SubclassSandbox.cs" />
     <Compile Include="IDesignPattern.cs" />
-    <Compile Include="DesignPatterns\ObjectPool.cs" />
+    <Compile Include="DesignPatterns\Optimization\ObjectPool.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="DesignPatterns\Prototype.cs" />
-    <Compile Include="DesignPatterns\State.cs" />
-    <Compile Include="DesignPatterns\Strategy.cs" />
-    <Compile Include="DesignPatterns\ServiceLocator.cs" />
+    <Compile Include="DesignPatterns\Creational\Prototype.cs" />
+    <Compile Include="DesignPatterns\Behavioral\State.cs" />
+    <Compile Include="DesignPatterns\Behavioral\Strategy.cs" />
+    <Compile Include="DesignPatterns\Decoupling\ServiceLocator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
