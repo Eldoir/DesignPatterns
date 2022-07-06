@@ -57,6 +57,7 @@
     <Compile Include="DesignPatterns\Structural\Facade.cs" />
     <Compile Include="DesignPatterns\Optimization\DirtyFlag.cs" />
     <Compile Include="DesignPatterns\Behavioral\SubclassSandbox.cs" />
+    <Compile Include="DesignPatterns\Structural\Proxy.cs" />
     <Compile Include="IDesignPattern.cs" />
     <Compile Include="DesignPatterns\Optimization\ObjectPool.cs" />
     <Compile Include="Program.cs" />

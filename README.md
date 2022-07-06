@@ -53,4 +53,4 @@ C# implementations of Design Patterns, mostly from [Game Programming Patterns](h
 - [Decorator](DesignPatterns/DesignPatterns/Structural/Decorator.cs)
 - [Façade](DesignPatterns/DesignPatterns/Structural/Facade.cs)
 - [Flyweight](DesignPatterns/DesignPatterns/Structural/Flyweight.cs)
-- Proxy
+- [Proxy](DesignPatterns/DesignPatterns/Structural/Proxy.cs)
