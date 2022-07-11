@@ -49,6 +49,7 @@
     <Compile Include="DesignPatterns\Behavioral\Command.cs" />
     <Compile Include="DesignPatterns\Creational\Builder.cs" />
     <Compile Include="DesignPatterns\Creational\AbstractFactory.cs" />
+    <Compile Include="DesignPatterns\Structural\Composite.cs" />
     <Compile Include="DesignPatterns\Structural\Decorator.cs" />
     <Compile Include="DesignPatterns\Behavioral\Observer.cs" />
     <Compile Include="DesignPatterns\Creational\Singleton.cs" />

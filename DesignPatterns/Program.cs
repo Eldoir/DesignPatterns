@@ -6,7 +6,7 @@ namespace DesignPatterns
     {
         static void Main()
         {
-            IDesignPattern pattern = new Proxy();
+            IDesignPattern pattern = new Composite();
             pattern.DisplayExample();
             Console.Read(); // Avoid quitting instantly
         }

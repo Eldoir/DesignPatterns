@@ -49,7 +49,7 @@ C# implementations of Design Patterns, mostly from [Game Programming Patterns](h
 
 - [Adapter](DesignPatterns/DesignPatterns/Structural/Adapter.cs)
 - Bridge
-- Composite
+- [Composite](DesignPatterns/DesignPatterns/Structural/Composite.cs)
 - [Decorator](DesignPatterns/DesignPatterns/Structural/Decorator.cs)
 - [Façade](DesignPatterns/DesignPatterns/Structural/Facade.cs)
 - [Flyweight](DesignPatterns/DesignPatterns/Structural/Flyweight.cs)
