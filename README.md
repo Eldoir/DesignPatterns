@@ -1,6 +1,6 @@
 # Design Patterns
 
-C# implementations of Design Patterns, mostly from [Game Programming Patterns](http://gameprogrammingpatterns.com/) book, and [Refactoring Guru](https://refactoring.guru/design-patterns) website.
+C# implementations of Design Patterns, taken from the [GoF Design Patterns](https://en.wikipedia.org/wiki/Design_Patterns), [Game Programming Patterns](http://gameprogrammingpatterns.com/), and [Refactoring Guru](https://refactoring.guru/design-patterns).
 
 ## Behavioral
 
