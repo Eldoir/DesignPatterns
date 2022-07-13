@@ -1,10 +1,27 @@
 # Design Patterns
 
-C# implementations of Design Patterns, taken from the [GoF Design Patterns](https://en.wikipedia.org/wiki/Design_Patterns), [Game Programming Patterns](http://gameprogrammingpatterns.com/), and [Refactoring Guru](https://refactoring.guru/design-patterns).
+C# implementations of Design Patterns, taken from the [GoF Design Patterns](https://en.wikipedia.org/wiki/Design_Patterns) and [Refactoring Guru](https://refactoring.guru/design-patterns).
+
+## Creational
+
+- [Factory Method](DesignPatterns/DesignPatterns/Creational/FactoryMethod.cs)
+- [Abstract Factory](DesignPatterns/DesignPatterns/Creational/AbstractFactory.cs)
+- [Builder](DesignPatterns/DesignPatterns/Creational/Builder.cs)
+- [Prototype](DesignPatterns/DesignPatterns/Creational/Prototype.cs)
+- [Singleton](DesignPatterns/DesignPatterns/Creational/Singleton.cs)
+
+## Structural
+
+- [Adapter](DesignPatterns/DesignPatterns/Structural/Adapter.cs)
+- [Bridge](DesignPatterns/DesignPatterns/Structural/Bridge.cs)
+- [Composite](DesignPatterns/DesignPatterns/Structural/Composite.cs)
+- [Decorator](DesignPatterns/DesignPatterns/Structural/Decorator.cs)
+- [Façade](DesignPatterns/DesignPatterns/Structural/Facade.cs)
+- [Flyweight](DesignPatterns/DesignPatterns/Structural/Flyweight.cs)
+- [Proxy](DesignPatterns/DesignPatterns/Structural/Proxy.cs)
 
 ## Behavioral
 
-- Bytecode
 - [Chain of Responsibility](DesignPatterns/DesignPatterns/Behavioral/ChainOfResponsibility.cs)
 - [Command](DesignPatterns/DesignPatterns/Behavioral/Command.cs)
 - Iterator
@@ -13,18 +30,24 @@ C# implementations of Design Patterns, taken from the [GoF Design Patterns](http
 - [Observer](DesignPatterns/DesignPatterns/Behavioral/Observer.cs)
 - [State](DesignPatterns/DesignPatterns/Behavioral/State.cs)
 - [Strategy](DesignPatterns/DesignPatterns/Behavioral/Strategy.cs)
-- [Subclass Sandbox](DesignPatterns/DesignPatterns/Behavioral/SubclassSandbox.cs)
 - Template Method
-- Type Object
 - [Visitor](DesignPatterns/DesignPatterns/Behavioral/Visitor.cs)
 
-## Creational
+# Game Programming Patterns
 
-- [Abstract Factory](DesignPatterns/DesignPatterns/Creational/AbstractFactory.cs)
-- [Builder](DesignPatterns/DesignPatterns/Creational/Builder.cs)
-- [Factory Method](DesignPatterns/DesignPatterns/Creational/FactoryMethod.cs)
-- [Prototype](DesignPatterns/DesignPatterns/Creational/Prototype.cs)
-- [Singleton](DesignPatterns/DesignPatterns/Creational/Singleton.cs)
+These patterns are specific to game programming and detailed in the awesome [Game Programming Patterns](http://gameprogrammingpatterns.com/) by Robert Nystrom.
+
+## Sequencing
+
+- Double Buffer
+- Game Loop
+- Update Method
+
+## Behavioral
+
+- Bytecode
+- [Subclass Sandbox](DesignPatterns/DesignPatterns/Behavioral/SubclassSandbox.cs)
+- Type Object
 
 ## Decoupling
 
@@ -38,19 +61,3 @@ C# implementations of Design Patterns, taken from the [GoF Design Patterns](http
 - [Dirty Flag](DesignPatterns/DesignPatterns/Optimization/DirtyFlag.cs)
 - [Object Pool](DesignPatterns/DesignPatterns/Optimization/ObjectPool.cs)
 - Spatial Partition
-
-## Sequencing
-
-- Double Buffer
-- Game Loop
-- Update Method
-
-## Structural
-
-- [Adapter](DesignPatterns/DesignPatterns/Structural/Adapter.cs)
-- [Bridge](DesignPatterns/DesignPatterns/Structural/Bridge.cs)
-- [Composite](DesignPatterns/DesignPatterns/Structural/Composite.cs)
-- [Decorator](DesignPatterns/DesignPatterns/Structural/Decorator.cs)
-- [Façade](DesignPatterns/DesignPatterns/Structural/Facade.cs)
-- [Flyweight](DesignPatterns/DesignPatterns/Structural/Flyweight.cs)
-- [Proxy](DesignPatterns/DesignPatterns/Structural/Proxy.cs)
