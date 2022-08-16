@@ -35,7 +35,7 @@ C# implementations of Design Patterns, taken from the [GoF Design Patterns](http
 
 # Game Programming Patterns
 
-These patterns are specific to game programming and detailed in the awesome [Game Programming Patterns](http://gameprogrammingpatterns.com/) by Robert Nystrom.
+These patterns are specific to game programming and detailed in the awesome [Game Programming Patterns](https://gameprogrammingpatterns.com/) by Robert Nystrom.
 
 ## Sequencing
 
