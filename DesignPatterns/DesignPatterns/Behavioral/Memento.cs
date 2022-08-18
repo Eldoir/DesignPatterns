@@ -39,6 +39,7 @@ namespace DesignPatterns
 
             public IMemento Save()
             {
+                Console.WriteLine($"State saved, value: {state}");
                 return new ConcreteMemento(state);
             }
 
@@ -78,7 +79,6 @@ namespace DesignPatterns
             public void Save()
             {
                 history.Push(originator.Save());
-                Console.WriteLine("State saved");
             }
 
             public void Restore()
