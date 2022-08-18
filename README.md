@@ -26,7 +26,7 @@ C# implementations of Design Patterns, taken from the [GoF Design Patterns](http
 - [Command](DesignPatterns/DesignPatterns/Behavioral/Command.cs)
 - Iterator
 - Mediator
-- Memento
+- [Memento](DesignPatterns/DesignPatterns/Behavioral/Memento.cs)
 - [Observer](DesignPatterns/DesignPatterns/Behavioral/Observer.cs)
 - [State](DesignPatterns/DesignPatterns/Behavioral/State.cs)
 - [Strategy](DesignPatterns/DesignPatterns/Behavioral/Strategy.cs)

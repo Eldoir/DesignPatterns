@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DesignPatterns\Behavioral\Memento.cs" />
     <Compile Include="DesignPatterns\Behavioral\Visitor.cs" />
     <Compile Include="DesignPatterns\Structural\Adapter.cs" />
     <Compile Include="DesignPatterns\Behavioral\ChainOfResponsibility.cs" />
